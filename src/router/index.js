@@ -4,6 +4,7 @@ const login = () => import("@/view/login")
 const index = () => import("@/view/index/index")
 const userManage = () => import("@/view/index/child/userManage")
 const videoManage = () => import("@/view/index/child/videoManage")
+const indexSettingManage = () => import("@/view/index/child/indexSettingManage")
 
 // Resolve duplicate routing
 const originalPush = Router.prototype.push;
@@ -68,6 +69,16 @@ const routes = [{
           path: "details",
           name: "details",
           component: () => import("@/view/index/child/video/videoDetails")
+        }]
+      },
+      {
+        path: "indexSettingManage",
+        name: "indexSettingManage",
+        component: indexSettingManage,
+        children: [{
+          path: "walking",
+          name: "walking",
+          component: () => import("@/view/index/child/indexSetting/walking")
         }]
       }
     ]

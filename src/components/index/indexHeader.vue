@@ -33,6 +33,10 @@ export default {
           name: "视频",
           link: "/index/videoManage/allVideo",
         },
+        {
+          name: "主页设置",
+          link: "/index/indexSettingManage/walking",
+        }
       ],
       nowActive: this.newActive
     };

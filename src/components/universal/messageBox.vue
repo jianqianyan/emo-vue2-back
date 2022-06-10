@@ -26,6 +26,9 @@
           >
           </el-switch>
         </div>
+        <div v-else-if="item == 'img_path'">
+          <img :src="message[item]" alt="">
+        </div>
         <div v-else>
           {{ message[item] }}
         </div>
@@ -121,6 +124,10 @@ export default {
       this.reverseSwitch();
     },
   },
+  computed:{
+    imgPath(path){
+    }
+  }
 };
 </script>
 <style scoped>
