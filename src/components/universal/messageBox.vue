@@ -26,8 +26,8 @@
           >
           </el-switch>
         </div>
-        <div v-else-if="item == 'img_path'">
-          <img :src="message[item]" alt="">
+        <div v-else-if="item == 'img_path'" class="message-img">
+          <el-image style=" height: 90%" :src="imgPath(message[item])" :preview-src-list="bigImg(message[item])"></el-image>
         </div>
         <div v-else>
           {{ message[item] }}
@@ -87,9 +87,7 @@ export default {
             alert(res.data.data.cause);
             this.message[keys] = 0;
             this.switch();
-          }
-          else if(res.data.state == 200){
-            
+          } else if (res.data.state == 200) {
           }
           // console.log(res);
         })
@@ -124,10 +122,20 @@ export default {
       this.reverseSwitch();
     },
   },
-  computed:{
-    imgPath(path){
+  computed: {
+    imgPath() {
+      return function (path) {
+        return this.$store.state.image_base + "/" + path;
+      };
+    },
+    bigImg(){
+      return function(path){
+        let arr = new Array();
+        arr.push(this.$store.state.image_base + "/" + path);
+        return arr;
+      }
     }
-  }
+  },
 };
 </script>
 <style scoped>
@@ -179,5 +187,9 @@ export default {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.message-img{
+  height: 100%;
+  text-align: center;
 }
 </style>

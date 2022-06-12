@@ -79,6 +79,10 @@ const routes = [{
           path: "walking",
           name: "walking",
           component: () => import("@/view/index/child/indexSetting/walking")
+        },{
+          path: "addWalking",
+          name: "addWalking",
+          component: () => import("@/view/index/child/indexSetting/addWalking")
         }]
       }
     ]
