@@ -2,7 +2,7 @@ import axios from "axios";
 import router from "../router";
 
 let config = {
-  baseURL: "http://localhost:3000", //配置路径
+  baseURL: "http://81.68.212.237:3000", //配置路径
   withCredentials: true, //允许跨域
 };
 

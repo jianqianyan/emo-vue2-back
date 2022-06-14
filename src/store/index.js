@@ -12,7 +12,7 @@ const store = new Vuex.Store({
     video_base: "http://81.68.212.237:3000/video",
     image_base: "http://81.68.212.237:3000/image",
     photo_base: "http://81.68.212.237:3000/user_photo",
-    ver_base: "http://localhost:3000/img_code",
+    ver_base: "http://81.68.212.237:3000/img_code",
     dataLoaded: false,
     userData: [],
     videoData: [],
