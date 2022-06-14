@@ -1,5 +1,5 @@
 <template>
-  <div class="index-setting-manage">
+  <div class="walking-setting-manage">
     <div class="bar-son" v-for="(item, index) in barSon" :key="index" :class="{'bar-son-active': nowActive == index}" @click="beChlik(index)">
       <span>{{ item.name }}</span>
     </div>
@@ -8,13 +8,13 @@
 
 <script>
 export default {
-  name: "index-setting-manage",
+  name: "walking-setting-manage",
   data() {
     return {
       barSon: [
         {
           name: "走马灯设置",
-          link: "/index/indexSettingManage/walking",
+          link: "/index/walkingSettingManage/walking",
         },
       ],
       nowActive: 0,
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style scoped>
-.index-setting-manage {
+.walking-setting-manage {
   width: 100%;
   height: 700px;
   border-right: solid 1px;

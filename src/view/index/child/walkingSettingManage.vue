@@ -1,7 +1,7 @@
 <template>
-    <div class="index-setting-manage">
+    <div class="walking-setting-manage">
         <div class="left-box">
-            <index-setting-bar></index-setting-bar>
+            <walking-setting-bar></walking-setting-bar>
         </div>
         <div class="right-box">
             <router-view></router-view>
@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import indexSettingBar from "@/components/indexSetting/indexSettingBar";
+import walkingSettingBar from "@/components/walkingSetting/walkingSettingBar";
 export default {
-    name: "index-setting-manage",
+    name: "walking-setting-manage",
     components:{
-        indexSettingBar
+        walkingSettingBar
     },
     created(){
 
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style scoped>
-.index-setting-manage {
+.walking-setting-manage {
   width: 100%;
 }
 .left-box {

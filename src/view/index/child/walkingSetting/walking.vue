@@ -45,7 +45,7 @@ export default {
     },
     addWalking(){
         this.$router.push({
-            path: "/index/indexSettingManage/addWalking"
+            path: "/index/walkingSettingManage/addWalking"
         })
     }
   },

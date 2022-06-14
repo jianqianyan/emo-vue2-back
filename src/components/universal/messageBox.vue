@@ -62,8 +62,14 @@ export default {
   },
   methods: {
     details() {
+      let path = this.$route.path;
+      let arr = path.split('/');
+      let newPath = "";
+      for(let i = 1 ; i < arr.length - 1 ; ++i)
+        newPath += '/' + arr[i];
+      newPath += '/details';
       this.$router.push({
-        path: "/index/" + this.source + "Manage/details",
+        path: newPath,
         query: this.message,
       });
     },

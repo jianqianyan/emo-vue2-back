@@ -35,7 +35,7 @@ export default {
         },
         {
           name: "主页设置",
-          link: "/index/indexSettingManage/walking",
+          link: "/index/walkingSettingManage/walking",
         }
       ],
       nowActive: this.newActive

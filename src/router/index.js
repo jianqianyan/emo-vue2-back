@@ -4,7 +4,7 @@ const login = () => import("@/view/login")
 const index = () => import("@/view/index/index")
 const userManage = () => import("@/view/index/child/userManage")
 const videoManage = () => import("@/view/index/child/videoManage")
-const indexSettingManage = () => import("@/view/index/child/indexSettingManage")
+const walkingSettingManage = () => import("@/view/index/child/walkingSettingManage")
 
 // Resolve duplicate routing
 const originalPush = Router.prototype.push;
@@ -45,7 +45,7 @@ const routes = [{
           component: () => import("@/view/index/child/user/addUser")
         }, {
           path: "details",
-          name: "details",
+          name: "userDetails",
           component: () => import("@/view/index/child/user/userDetails")
         }]
       },
@@ -67,22 +67,26 @@ const routes = [{
           component: () => import("@/view/index/child/video/recommendSetting")
         }, {
           path: "details",
-          name: "details",
+          name: "videoDetails",
           component: () => import("@/view/index/child/video/videoDetails")
         }]
       },
       {
-        path: "indexSettingManage",
-        name: "indexSettingManage",
-        component: indexSettingManage,
+        path: "walkingSettingManage",
+        name: "walkingSettingManage",
+        component: walkingSettingManage,
         children: [{
           path: "walking",
           name: "walking",
-          component: () => import("@/view/index/child/indexSetting/walking")
+          component: () => import("@/view/index/child/walkingSetting/walking")
         },{
           path: "addWalking",
           name: "addWalking",
-          component: () => import("@/view/index/child/indexSetting/addWalking")
+          component: () => import("@/view/index/child/walkingSetting/addWalking")
+        },{
+          path: "details",
+          name: "walkingDetails",
+          component: () => import("@/view/index/child/walkingSetting/walkingDetails")
         }]
       }
     ]
